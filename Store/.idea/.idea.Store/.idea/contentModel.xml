@@ -5,6 +5,7 @@
     <e p="$USER_HOME$/.cache/JetBrains/Rider2020.3/resharper-host/local/Transient/Rider/v203/SolutionCaches/_Store.571332978.00" t="ExcludeRecursive" />
     <e p="$PROJECT_DIR$" t="IncludeFlat">
       <e p="Store" t="IncludeRecursive">
+        <e p=".gitignore" t="Include" />
         <e p="Controllers" t="Include">
           <e p="WeatherForecastController.cs" t="Include" />
         </e>
@@ -27,6 +28,7 @@
         </e>
       </e>
       <e p="Store.Identity" t="IncludeRecursive">
+        <e p=".gitignore" t="Include" />
         <e p="Constants" t="Include">
           <e p="Authorization.cs" t="Include" />
         </e>
