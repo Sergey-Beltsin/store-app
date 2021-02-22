@@ -11,6 +11,7 @@ const backgroundWhiteSecondary: string = '#DEDEDE';
 
 const textDark: string = '#111111';
 const textWhite: string = '#E1E1E1';
+const textGrey: string = '#757575';
 
 const red: string = '#FF162E';
 const white: string = '#FFFFFF';
@@ -21,6 +22,7 @@ const iconWhite: string = '#FFFFFF';
 const iconDark: string = '#000000';
 const inputWhite: string = '#D7D7D7';
 const inputDark: string = '#111111';
+const disabled: string = '#292929';
 
 export const commonStyles: IDefaultThemeCommonStyles = {
   primary,
@@ -32,6 +34,7 @@ export const commonStyles: IDefaultThemeCommonStyles = {
   red,
   outline,
   border,
+  disabled,
 };
 
 export const theme: IDefaultThemes = {
@@ -39,6 +42,7 @@ export const theme: IDefaultThemes = {
     background: backgroundDark,
     backgroundSecondary: backgroundDarkSecondary,
     text: textWhite,
+    text02: textGrey,
     common: commonStyles,
     icon: iconWhite,
     input: inputDark,
@@ -47,6 +51,7 @@ export const theme: IDefaultThemes = {
     background: backgroundWhite,
     backgroundSecondary: backgroundWhiteSecondary,
     text: textDark,
+    text02: textGrey,
     common: commonStyles,
     icon: iconDark,
     input: inputWhite,

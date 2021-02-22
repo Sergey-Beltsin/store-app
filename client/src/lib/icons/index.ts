@@ -6,3 +6,5 @@ export { UserIcon } from './user';
 export { SunIcon } from './sun';
 export { MoonIcon } from './moon';
 export { SearchIcon } from './search';
+export { InvisibleIcon } from './invisible';
+export { VisibleIcon } from './visible';

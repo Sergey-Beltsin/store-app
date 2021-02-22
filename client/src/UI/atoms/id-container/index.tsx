@@ -14,7 +14,7 @@ export const IdContainer: FC<Props> = ({ children, title }) => (
 
 const Container = styled.div`
   width: 100%;
-  max-width: 700px;
+  max-width: 600px;
   padding: 20px;
   margin: 0 auto;
 
@@ -23,7 +23,10 @@ const Container = styled.div`
 
 const Title = styled.h1`
   margin: 0;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
 
-  font-size: 20px;
+  font-size: 28px;
+  color: ${({ theme }) => theme.text};
+
+  transition: 0.2s ease;
 `;

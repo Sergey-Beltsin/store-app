@@ -1,7 +1,13 @@
 import { FC } from 'react';
 import styled from 'styled-components';
 
-const Login: FC = () => <Container />;
+import { LoginContainer } from '@/features/id/login';
+
+const Login: FC = () => (
+  <Container>
+    <LoginContainer />
+  </Container>
+);
 
 export default Login;
 

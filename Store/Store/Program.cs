@@ -20,6 +20,7 @@ namespace Store
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
+                    webBuilder.UseSentry("https://8ab053e555e5493b8939e04736ebdef7@o513859.ingest.sentry.io/5647320");
                     webBuilder.UseStartup<Startup>();
                 });
     }

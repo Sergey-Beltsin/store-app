@@ -9,6 +9,7 @@ declare module 'styled-components' {
     outline: string;
     primary: string;
     primaryHovered: string;
+    disabled: string;
     secondary: string;
     border: string;
   }
@@ -17,6 +18,7 @@ declare module 'styled-components' {
     background: string;
     backgroundSecondary: string;
     text: string;
+    text02: string;
     icon: string;
     input: string;
     common: IDefaultThemeCommonStyles;

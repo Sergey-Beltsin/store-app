@@ -3,10 +3,13 @@ import styled from 'styled-components';
 
 import { FocusVisible } from '@/UI/atoms';
 import useTranslation from 'next-translate/useTranslation';
+import { InvisibleIcon, VisibleIcon } from '@/lib/icons';
 
 type Props = {
-  value?: string;
-  onChange?: (value: string) => void;
+  value: string;
+  onChange: (value: string) => void;
+  onBlur?: (value: string) => void;
+  type?: string;
   error?: string;
   placeholder?: string;
   maxWidth?: string;
@@ -24,28 +27,37 @@ type InputProps = {
 export const Input: FC<Props> = ({
   value,
   onChange,
+  onBlur,
+  type,
   error,
   placeholder,
   maxWidth,
   icon,
 }) => {
   const { t } = useTranslation('id');
-  const [localValue, setLocalValue] = useState(value || '');
+  const [isPasswordType, setIsPasswordType] = useState(type === 'password');
 
   return (
     <>
       <Container maxWidth={maxWidth}>
         <FocusVisible maxWidth={maxWidth}>
           <StyledInput
-            value={value || localValue}
-            onChange={({ target }) =>
-              value ? onChange(target.value) : setLocalValue(target.value)
-            }
+            value={value}
+            onChange={({ target }) => onChange(target.value)}
+            onBlur={({ target }) => onBlur(target.value)}
+            type={isPasswordType ? 'password' : 'text'}
             error={!!error}
             placeholder={placeholder}
             data-testid="input"
           />
           {icon && <Icon>{icon}</Icon>}
+          {type === 'password' && (
+            <PasswordIcon
+              onClick={() => setIsPasswordType((prevState) => !prevState)}
+            >
+              {isPasswordType ? <InvisibleIcon /> : <VisibleIcon />}
+            </PasswordIcon>
+          )}
         </FocusVisible>
       </Container>
       {error && <ErrorText>{t(`errors.${error}`)}</ErrorText>}
@@ -118,7 +130,10 @@ const Icon = styled.div`
   justify-content: center;
 
   pointer-events: none;
+  cursor: pointer;
 
+  background-color: transparent;
+  border: none;
   opacity: 0.8;
 
   & svg {
@@ -131,4 +146,8 @@ const Icon = styled.div`
       transition: 0.2s ease;
     }
   }
+`;
+
+const PasswordIcon = styled(Icon)`
+  pointer-events: auto;
 `;

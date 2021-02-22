@@ -1,4 +1,15 @@
 {
   "register": "Register",
-  "login": "Login"
+  "login": "Login",
+  "email": "Email address",
+  "password": "Password",
+  "submit": "Registration",
+  "haveAccount": "Already have an account? ",
+  "notAccount": "Don't have an account yet? ",
+  "errors": {
+    "length": "Required",
+    "tooShort": "Too short",
+    "tooLong": "Too long",
+    "validation": "Wrong format"
+  }
 }
